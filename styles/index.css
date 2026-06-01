@@ -10,8 +10,10 @@
 header
 {
     display: flex;
-    justify-content: space-between;
-    text-align: center;
+    justify-content: center; /* Centra tanto el logo como el menu en el medio*/
+    align-items: center; /*Los alinea perfectamente en la vertical*/
+    gap: 40px; /*Empuja un poco el menú lejos del logo para que no se peguen*/
+    padding: 20px;
 }
 
 
@@ -21,11 +23,13 @@ header h1
     display: block;
 }
 
+/* Relative asi el sub menu lo toma como referencia */
 .menu-desplegable
 {
     position: relative;
 }
 
+/* Al pasar por encima de la Categoria sale el sub menu*/
 .menu-desplegable:hover .sub-menu
 {
     display: block;
@@ -40,8 +44,8 @@ header h1
 
 .sub-menu
 {
-    display: none;
-    position: absolute;
+    display: none; /* De esta forma es invisible hasta que se pasa por "categorias"*/
+    position: absolute; /* Lo posici
     top: 100%;
     left: 0;
     background-color: #222;
