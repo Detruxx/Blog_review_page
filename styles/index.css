@@ -1,0 +1,66 @@
+/* Reseteo global para sacar márgenes por defecto */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+header h1
+{
+    text-align: center;
+    display: block;
+}
+
+.menu-desplegable
+{
+    position: relative;
+}
+
+.menu-desplegable:hover .sub-menu
+{
+    display: block;
+}
+
+.submenu li
+{
+    display: block;
+    width: 150px;
+}
+
+
+.sub-menu
+{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    padding: 0;
+
+}
+
+
+body
+{
+    font-family: 'Share Tech Mono', monospace;
+    background-color: #1b2838; /* Color de fondo estilo Steam */
+    color: #c7d5e0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+h1, h2, h3
+{
+    font-family:'Orbitron', sans-serif;
+}
