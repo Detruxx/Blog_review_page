@@ -290,10 +290,20 @@ main
 {
     display: flex;
     overflow-x: hidden; 
+    overflow-y: hidden; /* Mata la barra vertical fantasma*/
     gap: 20px;
     padding: 20px 5px;
     scroll-behavior: smooth;
     width: 100%;
+    
+    /* Oculta la barra en Firefox */
+    scrollbar-width: none; 
+}
+
+/* Oculta la barra en Chrome, Safari y el nuevo Edge */
+.carrusel-track::-webkit-scrollbar
+{
+    display: none;
 }
 
 .tarjeta-carrusel
