@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Rincón del Lector | Reseñas Literarias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-brand">El Rincón del Lector.</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#resenas">Reseñas</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Categorías <span class="arrow">▾</span></a>
+                <div class="dropdown-content">
+                    <a href="terror.html">Terror</a>
+                    <a href="ciencia-ficcion.html">Ciencia Ficción</a>
+                    <a href="misterio.html">Misterio y Thriller</a>
+                    <a href="desarrollo.html">Desarrollo Personal</a>
+                    <a href="clasicos.html">Clásicos Literarios</a>
+                </div>
+            </li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="contacto.html" class="btn-nav">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header id="inicio" class="hero section-reveal">
+        <div class="hero-content">
+            <h1>Descubre tu próxima <br><span>lectura favorita.</span></h1>
+            <p>Reseñas cuidadas, recomendaciones literarias y un espacio dedicado al amor por los libros y el café.</p>
+            <a href="#resenas" class="btn-primary">Explorar Reseñas</a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN: BUSCADOR -->
+    <section class="seccion-busqueda section-reveal">
+        <div class="buscador-wrapper">
+            <div class="buscador-contenedor">
+                <svg class="icono-lupa" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="input-busqueda" class="buscador-input" placeholder="Buscar por título, autor o género...">
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Carrusel de Tendencias -->
+        <section class="seccion-carrusel section-reveal">
+            <div class="section-header">
+                <h2>Tendencias de la Semana</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="carrusel-contenedor">
+                <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">&#10094;</button>
+                <div class="carrusel-track" id="track">
+                    
+                    <article class="tarjeta-tendencia card-reveal" onclick="abrirResena(this)">
+                        <img src="https://images.unsplash.com/photo-1587876931567-564ce588bfbd?w=400&h=600&fit=crop" class="img-tendencia" alt="Portada El Psicoanalista">
+                        <div class="tendencia-info">
+                            <span class="badge">Misterio</span>
+                            <h3>El Psicoanalista</h3>
+                            <p class="autor">John Katzenbach</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1587876931567-564ce588bfbd?w=600&h=900&fit=crop" class="portada-oculta">
+                        <span class="calificacion" style="display:none;">★★★★★</span>
+                        <div class="resena-completa-texto" style="display:none;">
+                            <p>Un thriller psicológico de ritmo frenético. "Feliz cumpleaños, doctor. Bienvenido al primer día de su muerte." Así comienza este magistral juego del gato y el ratón donde el Dr. Starks tiene 15 días para descubrir la identidad de su acosador o suicidarse.</p><br>
+                            <p>Katzenbach demuestra un dominio absoluto del suspenso, obligando al protagonista (y al lector) a dudar de todos y de todo. Una lectura adictiva.</p>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-tendencia card-reveal" onclick="abrirResena(this)">
+                        <img src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?w=400&h=600&fit=crop" class="img-tendencia" alt="Portada Neuromante">
+                        <div class="tendencia-info">
+                            <span class="badge">Ciencia Ficción</span>
+                            <h3>Neuromante</h3>
+                            <p class="autor">William Gibson</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?w=600&h=900&fit=crop" class="portada-oculta">
+                        <span class="calificacion" style="display:none;">★★★★½</span>
+                        <div class="resena-completa-texto" style="display:none;">
+                            <p>La novela que fundó el subgénero <em>Cyberpunk</em> e inventó el término "Ciberespacio" años antes de que existiera Internet. Seguir a Case, un vaquero de consolas caído en desgracia, en su último gran atraco es una experiencia visual y narrativa brutal.</p><br>
+                            <p>La prosa de Gibson es densa, poética y cargada de neón. Es una obra visionaria que predijo nuestro mundo hiperconectado y dominado por megacorporaciones.</p>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-tendencia card-reveal" onclick="abrirResena(this)">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=400&h=600&fit=crop" class="img-tendencia" alt="Portada Pensar rápido">
+                        <div class="tendencia-info">
+                            <span class="badge">Desarrollo Personal</span>
+                            <h3>Pensar rápido, pensar despacio</h3>
+                            <p class="autor">Daniel Kahneman</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600&h=900&fit=crop" class="portada-oculta">
+                        <span class="calificacion" style="display:none;">★★★★★</span>
+                        <div class="resena-completa-texto" style="display:none;">
+                            <p>El Premio Nobel de Economía nos regala el estudio definitivo sobre cómo tomamos decisiones. Kahneman divide nuestra mente en dos sistemas: el Sistema 1 (rápido, intuitivo, emocional) y el Sistema 2 (lento, deliberativo, lógico).</p><br>
+                            <p>Este libro te abrirá los ojos a los sesgos cognitivos que gobiernan tu vida diaria sin que te des cuenta. Es denso, pero cada capítulo es una revelación sobre la naturaleza humana.</p>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-tendencia card-reveal" onclick="abrirResena(this)">
+                        <img src="https://images.unsplash.com/photo-1463320726281-696a485928c7?w=400&h=600&fit=crop" class="img-tendencia" alt="Portada Crimen y Castigo">
+                        <div class="tendencia-info">
+                            <span class="badge">Clásicos Literarios</span>
+                            <h3>Crimen y Castigo</h3>
+                            <p class="autor">Fiódor Dostoyevski</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1463320726281-696a485928c7?w=600&h=900&fit=crop" class="portada-oculta">
+                        <span class="calificacion" style="display:none;">★★★★★</span>
+                        <div class="resena-completa-texto" style="display:none;">
+                            <p>Una inmersión asfixiante en la mente de un asesino. Raskólnikov cree que es un "hombre extraordinario", por encima de la moralidad común, lo que lo lleva a cometer un crimen atroz. Pero el verdadero protagonista de la novela es la culpa que lo consume después.</p><br>
+                            <p>Dostoyevski es un maestro de la psicología humana. La tensión y la paranoia son tan palpables que el lector sufre junto al protagonista en cada interrogatorio. Una obra monumental.</p>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-tendencia card-reveal" onclick="abrirResena(this)">
+                        <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400&h=600&fit=crop" class="img-tendencia" alt="Portada El Exorcista">
+                        <div class="tendencia-info">
+                            <span class="badge">Terror</span>
+                            <h3>El Exorcista</h3>
+                            <p class="autor">William Peter Blatty</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=600&h=900&fit=crop" class="portada-oculta">
+                        <span class="calificacion" style="display:none;">★★★★☆</span>
+                        <div class="resena-completa-texto" style="display:none;">
+                            <p>Si la película te asustó, el libro te helará la sangre. Blatty logra algo extraordinario: antes de llegar a los aspectos puramente demoníacos, somete al lector a un agotador proceso médico y psiquiátrico, anclando la historia en un realismo que potencia el terror.</p><br>
+                            <p>La relación entre el padre Karras, un sacerdote que pierde su fe, y el padre Merrin, es el corazón literario de esta obra cumbre del terror teológico.</p>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-tendencia card-reveal" onclick="abrirResena(this)">
+                        <img src="https://images.unsplash.com/photo-1629196914949-0145227774e1?w=400&h=600&fit=crop" class="img-tendencia" alt="Portada Silencio Inocentes">
+                        <div class="tendencia-info">
+                            <span class="badge">Misterio y Thriller</span>
+                            <h3>El Silencio de los Inocentes</h3>
+                            <p class="autor">Thomas Harris</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1629196914949-0145227774e1?w=600&h=900&fit=crop" class="portada-oculta">
+                        <span class="calificacion" style="display:none;">★★★★★</span>
+                        <div class="resena-completa-texto" style="display:none;">
+                            <p>La brillante joven del FBI, Clarice Starling, debe buscar la ayuda de un asesino en serie caníbal, el Dr. Hannibal Lecter, para atrapar a otro psicópata. La dinámica entre Clarice y Lecter es una de las más fascinantes y tensas jamás escritas.</p><br>
+                            <p>Harris no recurre al gore barato, sino que construye un terror inteligente, clínico y metódico. Un hito en la literatura policíaca que supera incluso a su galardonada adaptación cinematográfica.</p>
+                        </div>
+                    </article>
+
+                </div>
+                <button class="carrusel-btn next" onclick="moverCarrusel(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PARALLAX: Cita Destacada -->
+        <section class="seccion-cita section-reveal">
+            <div class="cita-parallax">
+                <div class="cita-contenido card-reveal">
+                    <blockquote>"Un lector vive mil vidas antes de morir. El que nunca lee, solo vive una."</blockquote>
+                    <cite>— George R.R. Martin</cite>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEPARADOR DECORATIVO -->
+        <div class="separador-elegante section-reveal">
+            <span>✧ ✦ ✧</span>
+        </div>
+
+        <!-- Reseñas -->
+        <section id="resenas" class="seccion-resenas section-reveal">
+            <div class="section-header">
+                <h2>Últimas Reseñas</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-resenas">
+                
+                <article class="tarjeta-resena card-reveal" onclick="abrirResena(this)">
+                    <img src="https://images.unsplash.com/photo-1629196914168-5af0602ee3fb?w=600&h=900&fit=crop" class="portada-oculta" alt="Portada El Nombre del Viento">
+                    <span class="badge">Fantasía</span>
+                    <h3>El Nombre del Viento</h3>
+                    <p class="autor">Patrick Rothfuss</p>
+                    <p class="extracto">Una obra maestra de la fantasía moderna. La prosa es poética y la historia de Kvothe te atrapa desde el primer capítulo en la posada Roca de Guía.</p>
+                    <div class="card-footer">
+                        <span class="calificacion">★★★★★</span>
+                        <span class="leer-mas">Leer reseña completa ⟶</span>
+                    </div>
+                    <div class="resena-completa-texto">
+                        <p><strong>El Nombre del Viento</strong> no es el típico libro de espadas y dragones. Es la autobiografía dictada de Kvothe, una leyenda viviente que ahora se esconde como un simple posadero. Rothfuss tiene un talento inmenso para la prosa; cada oración se siente rítmica, casi musical, lo cual tiene sentido dado que el protagonista es un músico excepcional.</p><br>
+                        <p>El sistema de magia (la Simpatía) es lógico y científico, contrastando maravillosamente con los elementos más místicos del mundo. Es una historia sobre el poder de los nombres, las historias que nos contamos a nosotros mismos y el costo de convertirse en un héroe.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena card-reveal" onclick="abrirResena(this)">
+                    <img src="https://images.unsplash.com/photo-1541873676-a18131494184?w=600&h=900&fit=crop" class="portada-oculta" alt="Portada Dune">
+                    <span class="badge">Ciencia Ficción</span>
+                    <h3>Dune</h3>
+                    <p class="autor">Frank Herbert</p>
+                    <p class="extracto">Un clásico indiscutible. La construcción del mundo en Arrakis, la ecología extrema y la política espacial son inigualables y visionarias.</p>
+                    <div class="card-footer">
+                        <span class="calificacion">★★★★½</span>
+                        <span class="leer-mas">Leer reseña completa ⟶</span>
+                    </div>
+                    <div class="resena-completa-texto">
+                        <p><strong>Dune</strong> es, para la ciencia ficción, lo que El Señor de los Anillos es para la fantasía. Herbert construyó un universo entero con su propia ecología, religión y política feudal galáctica. Arrakis, el planeta desértico, se siente tan real y hostil que da sed con solo leerlo.</p><br>
+                        <p>El viaje de Paul Atreides no es el clásico camino del héroe, sino una deconstrucción sombría sobre el peligro de los líderes carismáticos y el peso aplastante del destino. Un libro denso, complejo y absolutamente imprescindible.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena card-reveal" onclick="abrirResena(this)">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=900&fit=crop" class="portada-oculta" alt="Portada Hábitos Atómicos">
+                    <span class="badge">Desarrollo Personal</span>
+                    <h3>Hábitos Atómicos</h3>
+                    <p class="autor">James Clear</p>
+                    <p class="extracto">Un libro práctico y directo sobre cómo el 1% de mejora diaria transforma por completo tu vida. Lectura obligatoria para romper malos hábitos.</p>
+                    <div class="card-footer">
+                        <span class="calificacion">★★★★★</span>
+                        <span class="leer-mas">Leer reseña completa ⟶</span>
+                    </div>
+                    <div class="resena-completa-texto">
+                        <p>La premisa de James Clear es sencilla pero demoledora: no te elevas al nivel de tus metas, caes al nivel de tus sistemas. <strong>Hábitos Atómicos</strong> destierra la idea de que se necesita una enorme fuerza de voluntad para cambiar; en su lugar, propone modificar nuestro entorno y reducir la fricción para que los buenos hábitos sean automáticos.</p><br>
+                        <p>Con leyes claras (hacerlo obvio, atractivo, fácil y satisfactorio), este libro es un manual de ingeniería humana aplicado a la vida diaria. Imposible leerlo y no empezar a hacer pequeños cambios desde el primer día.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena card-reveal" onclick="abrirResena(this)">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=900&fit=crop" class="portada-oculta" alt="Portada El Proyecto Hail Mary">
+                    <span class="badge">Ficción Científica</span>
+                    <h3>El Proyecto Hail Mary</h3>
+                    <p class="autor">Andy Weir</p>
+                    <p class="extracto">Ciencia pura, supervivencia espacial y una amistad improbable. Si te gustó El Marciano, este libro te fascinará aún más.</p>
+                    <div class="card-footer">
+                        <span class="calificacion">★★★★☆</span>
+                        <span class="leer-mas">Leer reseña completa ⟶</span>
+                    </div>
+                    <div class="resena-completa-texto">
+                        <p>Nadie escribe sobre ciencia aplicada para resolver problemas de vida o muerte como Andy Weir. En <strong>El Proyecto Hail Mary</strong>, nuestro protagonista despierta solo en una nave espacial a años luz de casa, sin recordar su nombre y con la abrumadora misión de salvar la Tierra.</p><br>
+                        <p>El verdadero corazón de esta novela es el asombroso descubrimiento que hace a mitad del viaje y la entrañable relación que forma. Es una lectura ágil, súper nerd en el mejor sentido de la palabra, y llena de optimismo sobre el espíritu colaborativo.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena card-reveal" onclick="abrirResena(this)">
+                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=600&h=900&fit=crop" class="portada-oculta" alt="Portada Harry Quebert">
+                    <span class="badge">Misterio</span>
+                    <h3>La Verdad sobre el Caso Harry Quebert</h3>
+                    <p class="autor">Joël Dicker</p>
+                    <p class="extracto">Un thriller adictivo que mezcla saltos temporales, secretos de un pequeño pueblo y la complejidad de ser escritor.</p>
+                    <div class="card-footer">
+                        <span class="calificacion">★★★★★</span>
+                        <span class="leer-mas">Leer reseña completa ⟶</span>
+                    </div>
+                    <div class="resena-completa-texto">
+                        <p>Joël Dicker construyó una de las tramas de misterio más intrincadas y absorbentes de la última década. La historia de Marcus Goldman intentando salvar a su mentor de una acusación de asesinato ocurrida 30 años atrás es literalmente imposible de soltar.</p><br>
+                        <p>La novela juega constantemente con el lector, derribando teorías y construyendo nuevas en cada capítulo a través de múltiples líneas temporales. Más allá del asesinato, es una excelente reflexión sobre el bloqueo del escritor y los sacrificios detrás del éxito literario.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena card-reveal" onclick="abrirResena(this)">
+                    <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=600&h=900&fit=crop" class="portada-oculta" alt="Portada Orgullo y Prejuicio">
+                    <span class="badge">Clásicos</span>
+                    <h3>Orgullo y Prejuicio</h3>
+                    <p class="autor">Jane Austen</p>
+                    <p class="extracto">Ironía pura y crítica social disfrazada de romance. Austen sigue siendo relevante, ingeniosa y deliciosamente mordaz hoy en día.</p>
+                    <div class="card-footer">
+                        <span class="calificacion">★★★★★</span>
+                        <span class="leer-mas">Leer reseña completa ⟶</span>
+                    </div>
+                    <div class="resena-completa-texto">
+                        <p>Reducir <strong>Orgullo y Prejuicio</strong> a una simple novela romántica es ignorar el genio de Jane Austen. A través de la aguda mirada de Elizabeth Bennet, el libro es una sátira feroz sobre el mercado matrimonial, el esnobismo de clase y el papel limitado de la mujer en la Inglaterra georgiana.</p><br>
+                        <p>La tensión intelectual y emocional entre Lizzy y el Sr. Darcy ha sido copiada miles de veces, pero nunca superada. Su prosa está cargada de una ironía tan fina que, dos siglos después, sigue provocando sonrisas cómplices a los lectores modernos.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">El Rincón del Lector.</div>
+            <p>Donde las palabras cobran vida.</p>
+            
+            <div class="social-links">
+                <a href="#" aria-label="Facebook" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Instagram" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" aria-label="X (Twitter)" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                        <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 El Rincón del Lector. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="modal-galeria" class="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img class="modal-contenido" id="img-modal" alt="Vista ampliada">
+    </div>
+
+    <div id="modal-resena" class="modal">
+        <span class="cerrar" onclick="cerrarResenaModal()">&times;</span>
+        <div class="modal-resena-contenido">
+            <img id="mr-img" src="" alt="Portada del libro" class="mr-imagen">
+            <div class="mr-info">
+                <span id="mr-badge" class="badge"></span>
+                <h2 id="mr-titulo"></h2>
+                <p id="mr-autor" class="autor"></p>
+                <div class="calificacion" id="mr-calificacion"></div>
+                <div class="divisor-modal"></div>
+                <div id="mr-texto"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/index.js"></script>
+</body>
+</html>
