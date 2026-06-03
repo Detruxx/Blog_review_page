@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acción | El backlog de Detrux</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header id="navbar">
+        <div class="logo">
+            <h1>El backlog de Detrux</h1>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="menu-desplegable">
+                    <a href="categorias.html">Categorías ▼</a>
+                    <ul class="submenu">
+                        <li><a href="accion.html" style="color: var(--text-primary); text-shadow: 0 0 8px var(--accent-color);">Acción</a></li>
+                        <li><a href="aventura.html">Aventura</a></li>
+                        <li><a href="estrategia.html">Estrategia</a></li>
+                        <li><a href="indie.html">Indie</a></li>
+                        <li><a href="rpg.html">RPG</a></li>
+                    </ul>
+                </li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero section-reveal" style="min-height: 40vh; padding: 6rem 2rem 2rem;">
+        <div class="hero-content card-reveal">
+            <h2>Categoría: <span class="texto-resaltado">Acción</span></h2>
+            <p>Frenetismo puro, esquivas perfectas y lluvias de balas.</p>
+        </div>
+    </section>
+
+    <main>
+        <section id="recomendadas" class="section-reveal">
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta-juego card-reveal" onclick="abrirResena(this)">
+                    <div class="puntaje-miniatura"><span class="estrella">★</span> 9.0</div>
+                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=Zenless+Zone+Zero" alt="ZZZ" class="portada-oculta">
+                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=Zenless+Zone+Zero" alt="ZZZ">
+                    <h3 style="display:none;">Zenless Zone Zero</h3>
+                    <span class="badge" style="display:none;">ARPG / Acción</span>
+                    <span class="calificacion" style="display:none;">9.0 / 10</span>
+                    <div class="resena-completa-texto" style="display:none;">
+                        <p>El combate y los parrys visuales son una locura. Puro dinamismo en cada encargo urbano.</p>
+                    </div>
+                </article>
+                
+                <article class="tarjeta-juego card-reveal" onclick="abrirResena(this)">
+                    <div class="puntaje-miniatura"><span class="estrella">★</span> 9.5</div>
+                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=RE4+Remake" alt="RE4" class="portada-oculta">
+                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=RE4+Remake" alt="RE4">
+                    <h3 style="display:none;">Resident Evil 4 Remake</h3>
+                    <span class="badge" style="display:none;">Acción / Terror</span>
+                    <span class="calificacion" style="display:none;">9.5 / 10</span>
+                    <div class="resena-completa-texto" style="display:none;">
+                        <p>La reinvención perfecta del clásico. La tensión constante y el manejo del inventario lo hacen una joya atemporal.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="redes-sociales">
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+        <p>&copy; 2026 El backlogg de Detrux. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="modal-resena" class="modal">
+        <span class="cerrar" onclick="cerrarResenaModal()">&times;</span>
+        <div class="modal-resena-contenido">
+            <img id="mr-img" src="" alt="Portada del juego" class="mr-imagen">
+            <div class="mr-info">
+                <span id="mr-badge" class="badge"></span>
+                <h2 id="mr-titulo"></h2>
+                <div class="calificacion-modal" id="mr-calificacion"></div>
+                <div class="divisor-modal"></div>
+                <div id="mr-texto" class="mr-texto"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

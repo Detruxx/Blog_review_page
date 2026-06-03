@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías | El backlogg de Detrux</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="logo">
+            <h1>El backlog de Detrux</h1>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="menu-desplegable">
+                    <!-- Ahora esto es un enlace real a esta misma página -->
+                    <a href="categorias.html" style="color: var(--text-primary); text-shadow: 0 0 8px var(--accent-color);">Categorías ▼</a>
+                    <ul class="submenu">
+                        <li><a href="accion.html">Acción</a></li>
+                        <li><a href="aventura.html">Aventura</a></li>
+                        <li><a href="estrategia.html">Estrategia</a></li>
+                        <li><a href="indie.html">Indie</a></li>
+                        <li><a href="rpg.html">RPG</a></li>
+                    </ul>
+                </li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding-top: 100px; min-height: 70vh;">
+        <div class="section-header section-reveal">
+            <h2>Explorar <span class="texto-resaltado">Categorías</span></h2>
+            <div class="divider"></div>
+            <p>Elegí tu género favorito y descubrí tu próxima obsesión.</p>
+        </div>
+
+        <section class="section-reveal">
+            <div class="grid-categorias">
+                
+                <a href="accion.html" class="tarjeta-categoria card-reveal">
+                    <i class="fa-solid fa-crosshairs icono-cat"></i>
+                    <h3>Acción</h3>
+                    <p>Frenetismo puro y lluvias de balas.</p>
+                </a>
+
+                <a href="aventura.html" class="tarjeta-categoria card-reveal">
+                    <i class="fa-solid fa-compass icono-cat"></i>
+                    <h3>Aventura</h3>
+                    <p>Mundos inmersivos y narrativas atrapantes.</p>
+                </a>
+
+                <a href="estrategia.html" class="tarjeta-categoria card-reveal">
+                    <i class="fa-solid fa-chess-knight icono-cat"></i>
+                    <h3>Estrategia</h3>
+                    <p>Tácticas milimétricas y gestión de recursos.</p>
+                </a>
+
+                <a href="indie.html" class="tarjeta-categoria card-reveal">
+                    <i class="fa-solid fa-gamepad icono-cat"></i>
+                    <h3>Indie</h3>
+                    <p>Mecánicas innovadoras hechas con pasión.</p>
+                </a>
+
+                <a href="rpg.html" class="tarjeta-categoria card-reveal">
+                    <i class="fa-solid fa-dragon icono-cat"></i>
+                    <h3>RPG</h3>
+                    <p>Builds rotas y progresión de personajes.</p>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="redes-sociales">
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+        <p>&copy; 2026 El backlogg de Detrux. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
