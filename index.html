@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El backlog de Detrux</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
 
     <!-- NAVEGACIÓN FIJA -->
@@ -21,7 +24,8 @@
         <nav>
             <ul id="nav-links">
                 <!-- El Inicio está resaltado para indicar que estamos en el Home -->
-                <li><a href="index.html" style="color: var(--text-primary); text-shadow: 0 0 8px var(--accent-color);">Inicio</a></li>
+                <li><a href="index.html"
+                        style="color: var(--text-primary); text-shadow: 0 0 8px var(--accent-color);">Inicio</a></li>
                 <li class="menu-desplegable">
                     <a href="categorias.html">Categorías ▼</a>
                     <ul class="submenu">
@@ -42,7 +46,8 @@
     <section class="hero section-reveal">
         <div class="hero-content card-reveal">
             <h2>Bienvenidos a mi <br><span class="texto-resaltado">repositorio de reseñas :D</span></h2>
-            <p>Acá vas a encontrar análisis profundos, capturas y opiniones de los títulos que voy pasando. Un espacio dedicado a vaciar el backlog, desde los clásicos inmortales hasta las joyas indie más ocultas.</p>
+            <p>Acá vas a encontrar análisis profundos, capturas y opiniones de los títulos que voy pasando. Un espacio
+                dedicado a vaciar el backlog, desde los clásicos inmortales hasta las joyas indie más ocultas.</p>
         </div>
     </section>
 
@@ -51,7 +56,8 @@
         <div class="buscador-wrapper">
             <div class="buscador-contenedor">
                 <i class="fa-solid fa-magnifying-glass icono-lupa"></i>
-                <input type="text" id="input-busqueda" class="buscador-input" placeholder="Buscar juego, género o franquicia...">
+                <input type="text" id="input-busqueda" class="buscador-input"
+                    placeholder="Buscar juego, género o franquicia...">
             </div>
         </div>
     </section>
@@ -66,56 +72,64 @@
             <div class="carrusel-contenedor">
                 <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">&#10094;</button>
                 <div class="carrusel-track" id="track">
-                    
+
                     <article class="tarjeta-carrusel card-reveal" onclick="abrirResena(this)">
                         <img src="img/alan_wake_2_portada.jpg" class="img-carrusel" alt="Alan Wake">
                         <div class="carrusel-info">
                             <span class="badge">Survival Horror</span>
                             <h3>Alan Wake 2</h3>
                         </div>
-                        <img src="https://placehold.co/400x600/171a21/66c0f4?text=Alan+Wake+2" class="portada-oculta">
+                        <img src="img/alan_wake_2_portada.jpg" class="portada-oculta">
                         <span class="calificacion" style="display:none;">★★★★★</span>
                         <div class="resena-completa-texto" style="display:none;">
-                            <p>Una secuela que rompe la cuarta pared constantemente. La atmósfera en el Lugar Oscuro es asfixiante y el diseño de audio te mantiene en tensión absoluta.</p>
+                            <p>Una secuela que rompe la cuarta pared constantemente. La atmósfera en el Lugar Oscuro es
+                                asfixiante y el diseño de audio te mantiene en tensión absoluta.</p>
                         </div>
                     </article>
 
                     <article class="tarjeta-carrusel card-reveal" onclick="abrirResena(this)">
-                        <img src="https://placehold.co/400x600/171a21/66c0f4?text=Zenless+Zone+Zero" class="img-carrusel" alt="ZZZ">
+                        <img src="img/zzz_portada.jpg"
+                            class="img-carrusel" alt="ZZZ">
                         <div class="carrusel-info">
                             <span class="badge">ARPG</span>
                             <h3>Zenless Zone Zero</h3>
                         </div>
-                        <img src="https://placehold.co/400x600/171a21/66c0f4?text=Zenless+Zone+Zero" class="portada-oculta">
+                        <img src="img/zzz_portada.jpg"
+                            class="portada-oculta">
                         <span class="calificacion" style="display:none;">★★★★☆</span>
                         <div class="resena-completa-texto" style="display:none;">
-                            <p>El combate es brutalmente dinámico y fluido. La estética urbana y la música son increíbles, un gacha con muchísima personalidad.</p>
+                            <p>El combate es brutalmente dinámico y fluido. La estética urbana y la música son
+                                increíbles, un gacha con muchísima personalidad.</p>
                         </div>
                     </article>
 
                     <article class="tarjeta-carrusel card-reveal" onclick="abrirResena(this)">
-                        <img src="https://placehold.co/400x600/171a21/66c0f4?text=Persona+4" class="img-carrusel" alt="Persona 4">
+                        <img src="img/persona_4_portada.png" class="img-carrusel"
+                            alt="Persona 4">
                         <div class="carrusel-info">
                             <span class="badge">JRPG</span>
                             <h3>Persona 4 Golden</h3>
                         </div>
-                        <img src="https://placehold.co/400x600/171a21/66c0f4?text=Persona+4" class="portada-oculta">
+                        <img src="img/persona_4_portada.png" class="portada-oculta">
                         <span class="calificacion" style="display:none;">★★★★★</span>
                         <div class="resena-completa-texto" style="display:none;">
-                            <p>Un clásico de culto. Inaba se siente como un hogar real y el misterio del asesino de la televisión te atrapa desde la primera hora de juego.</p>
+                            <p>Un clásico de culto. Inaba se siente como un hogar real y el misterio del asesino de la
+                                televisión te atrapa desde la primera hora de juego.</p>
                         </div>
                     </article>
 
                     <article class="tarjeta-carrusel card-reveal" onclick="abrirResena(this)">
-                        <img src="https://placehold.co/400x600/171a21/66c0f4?text=Silent+Hill+2" class="img-carrusel" alt="Silent Hill 2">
+                        <img src="img/silent_hill2_portada.webp" class="img-carrusel"
+                            alt="Silent Hill 2">
                         <div class="carrusel-info">
                             <span class="badge">Terror Psicológico</span>
                             <h3>Silent Hill 2</h3>
                         </div>
-                        <img src="https://placehold.co/400x600/171a21/66c0f4?text=Silent+Hill+2" class="portada-oculta">
+                        <img src="img/silent_hill2_portada.webp" class="portada-oculta">
                         <span class="calificacion" style="display:none;">★★★★★</span>
                         <div class="resena-completa-texto" style="display:none;">
-                            <p>La niebla es solo el principio. Un viaje deprimente pero magistral sobre la culpa y los demonios internos.</p>
+                            <p>La niebla es solo el principio. Un viaje deprimente pero magistral sobre la culpa y los
+                                demonios internos.</p>
                         </div>
                     </article>
 
@@ -135,53 +149,61 @@
                 <h2>Últimas reseñas</h2>
                 <div class="divider"></div>
             </div>
-            
+
             <div class="contenedor-tarjetas">
                 <article class="tarjeta-juego card-reveal" onclick="abrirResena(this)">
                     <div class="puntaje-miniatura"><span class="estrella">★</span> 9.0</div>
-                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=RE+Requiem" alt="Resident Evil Requiem" class="portada-oculta">
-                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=RE+Requiem" alt="Resident Evil Requiem">
+                    <img src="img/RE_requiem_portada.jpeg" alt="Resident Evil Requiem"
+                        class="portada-oculta">
+                    <img src="img/RE_requiem_portada.jpeg" alt="Resident Evil Requiem">
                     <h3 style="display:none;">Resident Evil Requiem</h3>
                     <span class="badge" style="display:none;">Survival Horror</span>
                     <span class="calificacion" style="display:none;">9.0 / 10</span>
                     <div class="resena-completa-texto" style="display:none;">
-                        <p>Análisis detallado de Resident Evil Requiem. Una vuelta de tuerca interesante a la fórmula clásica de la saga, gestionando recursos al milímetro.</p>
+                        <p>Análisis detallado de Resident Evil Requiem. Una vuelta de tuerca interesante a la fórmula
+                            clásica de la saga, gestionando recursos al milímetro.</p>
                     </div>
                 </article>
 
                 <article class="tarjeta-juego card-reveal" onclick="abrirResena(this)">
                     <div class="puntaje-miniatura"><span class="estrella">★</span> 8.5</div>
-                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=Rain+World" alt="Rain World" class="portada-oculta">
-                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=Rain+World" alt="Rain World">
+                    <img src="img/rain_world_portada.avif" alt="Rain World"
+                        class="portada-oculta">
+                    <img src="img/rain_world_portada.avif" alt="Rain World">
                     <h3 style="display:none;">Rain World</h3>
                     <span class="badge" style="display:none;">Supervivencia / Plataformas</span>
                     <span class="calificacion" style="display:none;">8.5 / 10</span>
                     <div class="resena-completa-texto" style="display:none;">
-                        <p>No eres el cazador, eres la presa. Un ecosistema vivo y brutal que te castiga por cada error, pero recompensa la paciencia y el aprendizaje.</p>
+                        <p>No eres el cazador, eres la presa. Un ecosistema vivo y brutal que te castiga por cada error,
+                            pero recompensa la paciencia y el aprendizaje.</p>
                     </div>
                 </article>
 
                 <article class="tarjeta-juego card-reveal" onclick="abrirResena(this)">
                     <div class="puntaje-miniatura"><span class="estrella">★</span> 7.5</div>
-                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=Juego+3" alt="Juego 3" class="portada-oculta">
+                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=Juego+3" alt="Juego 3"
+                        class="portada-oculta">
                     <img src="https://placehold.co/400x600/2a475e/66c0f4?text=Juego+3" alt="Juego 3">
                     <h3 style="display:none;">Juego Misterioso 3</h3>
                     <span class="badge" style="display:none;">Indie</span>
                     <span class="calificacion" style="display:none;">7.5 / 10</span>
                     <div class="resena-completa-texto" style="display:none;">
-                        <p>Una premisa interesante que se desinfla hacia la mitad del juego. Aún así, los controles son responsivos.</p>
+                        <p>Una premisa interesante que se desinfla hacia la mitad del juego. Aún así, los controles son
+                            responsivos.</p>
                     </div>
                 </article>
 
                 <article class="tarjeta-juego card-reveal" onclick="abrirResena(this)">
                     <div class="puntaje-miniatura"><span class="estrella">★</span> 9.5</div>
-                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=Juego+4" alt="Juego 4" class="portada-oculta">
+                    <img src="https://placehold.co/400x600/2a475e/66c0f4?text=Juego+4" alt="Juego 4"
+                        class="portada-oculta">
                     <img src="https://placehold.co/400x600/2a475e/66c0f4?text=Juego+4" alt="Juego 4">
                     <h3 style="display:none;">Juego Increíble 4</h3>
                     <span class="badge" style="display:none;">Acción RPG</span>
                     <span class="calificacion" style="display:none;">9.5 / 10</span>
                     <div class="resena-completa-texto" style="display:none;">
-                        <p>Fácilmente uno de los mejores sistemas de combate de la generación. El parry se siente increíblemente satisfactorio.</p>
+                        <p>Fácilmente uno de los mejores sistemas de combate de la generación. El parry se siente
+                            increíblemente satisfactorio.</p>
                     </div>
                 </article>
             </div>
@@ -191,7 +213,8 @@
         <section class="seccion-cita section-reveal">
             <div class="cita-parallax">
                 <div class="cita-contenido card-reveal">
-                    <blockquote>"El hombre adecuado en el sitio equivocado puede cambiar el rumbo del mundo."</blockquote>
+                    <blockquote>"El hombre adecuado en el sitio equivocado puede cambiar el rumbo del mundo."
+                    </blockquote>
                     <cite>— G-Man (Half-Life 2)</cite>
                 </div>
             </div>
@@ -203,20 +226,22 @@
                 <h2>Juegos más valorados (Top 3)</h2>
                 <div class="divider"></div>
             </div>
-            
+
             <div class="contenedor-top3">
                 <article class="tarjeta-top card-reveal" onclick="abrirResena(this)">
                     <div class="medalla">#1</div>
                     <div style="position: relative;">
                         <div class="puntaje-miniatura"><span class="estrella">★</span> 10</div>
-                        <img src="https://placehold.co/400x600/ffd700/171a21?text=RE4+Remake" alt="Top 1" class="portada-oculta">
-                        <img src="https://placehold.co/400x600/ffd700/171a21?text=RE4+Remake" alt="Top 1">
+                        <img src="img/residente_evil_4_portada.webp" alt="Top 1"
+                            class="portada-oculta">
+                        <img src="img/residente_evil_4_portada.webp" alt="Top 1">
                     </div>
                     <h3>Resident Evil 4 Remake</h3>
                     <span class="badge" style="display:none;">Acción / Terror</span>
                     <span class="calificacion" style="display:none;">10 / 10</span>
                     <div class="resena-completa-texto" style="display:none;">
-                        <p>Cómo hacer un remake perfecto. Mantiene la esencia del original de GameCube pero moderniza el gunplay. El cuchillo ahora es una herramienta de parry fundamental.</p>
+                        <p>Cómo hacer un remake perfecto. Mantiene la esencia del original de GameCube pero moderniza el
+                            gunplay. El cuchillo ahora es una herramienta de parry fundamental.</p>
                     </div>
                 </article>
 
@@ -224,14 +249,15 @@
                     <div class="medalla">#2</div>
                     <div style="position: relative;">
                         <div class="puntaje-miniatura"><span class="estrella">★</span> 9.5</div>
-                        <img src="https://placehold.co/400x600/c0c0c0/171a21?text=Alan+Wake" alt="Top 2" class="portada-oculta">
-                        <img src="https://placehold.co/400x600/c0c0c0/171a21?text=Alan+Wake" alt="Top 2">
+                        <img src="img/alan_wake_2_portada.jpg" alt="Top 2" class="portada-oculta">
+                        <img src="img/alan_wake_2_portada.jpg" alt="Top 2">
                     </div>
                     <h3>Alan Wake</h3>
                     <span class="badge" style="display:none;">Thriller Psicológico</span>
                     <span class="calificacion" style="display:none;">9.5 / 10</span>
                     <div class="resena-completa-texto" style="display:none;">
-                        <p>La luz es tu única arma real. La narrativa inspirada en Twin Peaks y Stephen King lo convierte en una experiencia literaria dentro de un videojuego.</p>
+                        <p>La luz es tu única arma real. La narrativa inspirada en Twin Peaks y Stephen King lo
+                            convierte en una experiencia literaria dentro de un videojuego.</p>
                     </div>
                 </article>
 
@@ -239,14 +265,16 @@
                     <div class="medalla">#3</div>
                     <div style="position: relative;">
                         <div class="puntaje-miniatura"><span class="estrella">★</span> 9.0</div>
-                        <img src="https://placehold.co/400x600/cd7f32/171a21?text=Zenless+Zone+Zero" alt="Top 3" class="portada-oculta">
-                        <img src="https://placehold.co/400x600/cd7f32/171a21?text=Zenless+Zone+Zero" alt="Top 3">
+                        <img src="img/zzz_portada.jpg" alt="Top 3"
+                            class="portada-oculta">
+                        <img src="img/zzz_portada.jpg" alt="Top 3">
                     </div>
                     <h3>Zenless Zone Zero</h3>
                     <span class="badge" style="display:none;">ARPG</span>
                     <span class="calificacion" style="display:none;">9.0 / 10</span>
                     <div class="resena-completa-texto" style="display:none;">
-                        <p>Estilo desbordante. El sistema de asistencias y combos es súper vistoso. La ciudad de New Eridu está viva y llena de detalles.</p>
+                        <p>Estilo desbordante. El sistema de asistencias y combos es súper vistoso. La ciudad de New
+                            Eridu está viva y llena de detalles.</p>
                     </div>
                 </article>
             </div>
@@ -267,7 +295,7 @@
         <span class="cerrar" onclick="cerrarResenaModal()">&times;</span>
         <!-- Flecha Izquierda -->
         <button class="modal-nav-btn prev" onclick="navegarResena(-1)">&#10094;</button>
-        
+
         <div class="modal-resena-contenido">
             <img id="mr-img" src="" alt="Portada del juego" class="mr-imagen">
             <div class="mr-info">
@@ -278,11 +306,12 @@
                 <div id="mr-texto" class="mr-texto"></div>
             </div>
         </div>
-        
+
         <!-- Flecha Derecha -->
         <button class="modal-nav-btn next" onclick="navegarResena(1)">&#10095;</button>
     </div>
 
     <script src="js/index.js"></script>
 </body>
+
 </html>
